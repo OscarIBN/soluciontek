@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+# Aplicación de Productos con React 19
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una aplicación web moderna construida con React 19, TypeScript y Tailwind CSS que incluye autenticación fake, consumo de API pública y modo oscuro/claro.
 
-## Available Scripts
+## Características
 
-In the project directory, you can run:
+- ✅ **Pantalla de Login**: Autenticación fake con email y contraseña
+- ✅ **Pantalla Home**: Lista de productos desde API pública (https://api.escuelajs.co/api/v1/products)
+- ✅ **Logout**: Botón para cerrar sesión y limpiar la sesión
+- ✅ **Modo Oscuro/Claro**: Toggle para cambiar entre temas
+- ✅ **Diseño Responsivo**: Adaptable a diferentes tamaños de pantalla
+- ✅ **Efectos Visuales**: Fondo con gradientes animados
+- ✅ **Búsqueda**: Filtrado de productos en tiempo real
 
-### `npm start`
+## Tecnologías Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React 19**: Framework principal
+- **TypeScript**: Tipado estático
+- **Tailwind CSS**: Framework de estilos
+- **Node.js 24.5.0**: Entorno de ejecución
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Instalación y Ejecución
 
-### `npm test`
+1. Instalar dependencias:
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Iniciar la aplicación:
+```bash
+npm start
+```
 
-### `npm run build`
+3. Abrir en el navegador: http://localhost:3000
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Uso
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Login**: Usa cualquier email y contraseña para acceder (autenticación fake)
+2. **Explorar Productos**: Ve la lista de productos cargados desde la API
+3. **Buscar**: Usa la barra de búsqueda para filtrar productos
+4. **Cambiar Tema**: Usa el botón de sol/luna para alternar entre modo claro y oscuro
+5. **Cerrar Sesión**: Usa el botón "Cerrar Sesión" para volver al login
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Estructura del Proyecto
 
-### `npm run eject`
+```
+src/
+├── components/
+│   ├── Login.tsx          # Componente de login
+│   └── Home.tsx           # Componente principal con productos
+├── contexts/
+│   ├── AuthContext.tsx    # Contexto de autenticación
+│   └── ThemeContext.tsx   # Contexto de tema
+├── App.tsx                # Componente principal
+└── index.css              # Estilos globales
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## API Utilizada
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+La aplicación consume la API pública de EscuelaJS:
+- **Endpoint**: https://api.escuelajs.co/api/v1/products
+- **Datos**: Lista de productos con información completa
+- **Formato**: JSON
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Características Técnicas
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **Autenticación**: Sistema fake que simula login con token
+- **Persistencia**: Datos de usuario guardados en localStorage
+- **Responsive**: Diseño adaptable usando Tailwind CSS
+- **Animaciones**: Efectos suaves y transiciones
+- **Accesibilidad**: Componentes accesibles y semánticamente correctos
 
-## Learn More
+## Autor
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+   ___                    ___ ____  _   _ 
+  / _ \ ___  ___ __ _ _ _|_ _| __ )| \ | |
+ | | | / __|/ __/ _` | '__| ||  _ \|  \| |
+ | |_| \__ \ (_| (_| | |  | || |_) | |\  |
+  \___/|___/\___\__,_|_| |___|____/|_| \_|
+                                          
+FullStack Senior
+```
